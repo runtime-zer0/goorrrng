@@ -1,3 +1,5 @@
+package GOORRRNG.김근호.bfs.토마토;
+
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
