@@ -1,5 +1,3 @@
-package inflearn._08_dfs_bfs_advanced._11_미로의_최단거리_통로;
-
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
