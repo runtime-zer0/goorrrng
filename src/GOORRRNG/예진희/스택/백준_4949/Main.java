@@ -1,4 +1,4 @@
-package GOORRRNG.예진희.큐.백준_4949;
+package GOORRRNG.예진희.스택.백준_4949;
 
 import java.util.Scanner;
 import java.util.Stack;
