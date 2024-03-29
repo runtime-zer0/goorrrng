@@ -5,7 +5,6 @@ public class Baek_19638 {
     static int n,h,t;
     static PriorityQueue<Integer> pq=new PriorityQueue<>(Collections.reverseOrder());
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         Scanner sc=new Scanner(System.in);
 
         n=sc.nextInt(); // 거인의 수
