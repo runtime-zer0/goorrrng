@@ -19,6 +19,7 @@ public class 바둑대회 {
                     black.add(i);
                 }
             }
+
             sumWhite = 0;
             sumBlack = 0;
             for (int i = 0; i < len / 2; i++) {
@@ -27,6 +28,7 @@ public class 바둑대회 {
             }
 
             answer = Math.min(answer, Math.abs(sumWhite - sumBlack));
+
         } else {
             for (int i = s; i < len; i++) {
                 if (visited[i] == 0) {
@@ -40,10 +42,9 @@ public class 바둑대회 {
 
     public static int solution(int[][] cans){
         len = cans.length;
-
         answer = Integer.MAX_VALUE;
-
         visited = new int[len];
+
         DFS(0, 0, cans);
 
         return answer;
