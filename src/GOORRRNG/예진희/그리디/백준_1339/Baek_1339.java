@@ -13,11 +13,11 @@ public class Baek_1339 {
         Arrays.fill(alpha, 0);
 
         for(int i=0; i<n; i++) {
-            char input[] = br.readLine().toCharArray();
+            char[] input = br.readLine().toCharArray();
             int pos = 1;
 
             for(int j = input.length -1; j>=0; j--) {
-                alpha[input[j] - 'A'] += Integer.valueOf(pos);
+                alpha[input[j] - 'A'] += pos;
                 pos*=10;
             }
         }
