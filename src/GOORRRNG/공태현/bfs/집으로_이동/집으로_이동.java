@@ -1,4 +1,4 @@
-package GOORRRNG.공태현.bfs.타일_점프.집으로_이동;
+package GOORRRNG.공태현.bfs.집으로_이동;
 
 import java.util.LinkedList;
 import java.util.Queue;
