@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-public class Main {
+public class TopDown {
 	static int[][] dp;
 
 	public static int solution(int[][] triangle) {
