@@ -17,9 +17,9 @@ public class 숲속의_기사 {
         for(int i = 0; i < r; i++){
             for(int j = 0; j < c; j++){
                 if (board[i][j] == 2 || board[i][j] == 3) {
-                    queue.offer(new int[]{i, j});
                     boolean[][] visited = new boolean[r][c];
                     visited[i][j] = true;
+                    queue.offer(new int[]{i, j});
 
                     int level = 0;
                     while (!queue.isEmpty()) {
