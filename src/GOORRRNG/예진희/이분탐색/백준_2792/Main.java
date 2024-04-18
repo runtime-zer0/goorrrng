@@ -1,3 +1,4 @@
+package GOORRRNG.예진희.이분탐색.백준_2792;
 import java.util.*;
 
 public class Main {
