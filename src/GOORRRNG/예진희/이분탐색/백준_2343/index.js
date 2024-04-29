@@ -4,14 +4,14 @@ const input = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
 const [N, M] = input.shift().split(' ').map(Number);
 const classes = input[0].split(' ').map(Number);
 
-let left = Math.max(...classes);
+let start = Math.max(...classes);
 
-let right = classes.reduce((acc, cur) => acc + cur);
+let end = classes.reduce((acc, cur) => acc + cur);
 
 let answer = Number.MAX_SAFE_INTEGER;
-while (left <= right) {
+while (start <= end) {
   let cnt = 1;
-  let mid = Math.floor((left + right) / 2);
+  let mid = Math.floor((start + end) / 2);
   let tmp = 0;
   for (let i = 0; i < classes.length; i++) {
     if (tmp + classes[i] <= mid) {
@@ -24,12 +24,12 @@ while (left <= right) {
   }
 
   if (cnt > M) {
-    left = mid + 1;
+    start = mid + 1;
   }
 
   if (cnt <= M) {
     if (answer >= mid) answer = mid;
-    right = mid - 1;
+    end = mid - 1;
   }
 }
 
