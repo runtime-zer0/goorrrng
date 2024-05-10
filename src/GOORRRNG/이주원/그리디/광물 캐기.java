@@ -1,0 +1,31 @@
+import java.util.*;
+
+class Solution {
+    public int solution(int[] picks, String[] minerals) {
+        int answer = 0;
+        int canPick = picks[0]*5 + picks[1]*5 + picks[2]*5;
+        int[][] fatigues = new int[(int) Math.ceil(Math.min(minerals.length, canPick) / 5.0)][3];
+        for(int i = 0; i < Math.min(minerals.length, canPick); i++) {
+            if(minerals[i].equals("diamond")) {
+                fatigues[i/5][1] += 5;
+                fatigues[i/5][2] += 25;
+            } else if(minerals[i].equals("iron")) {
+                fatigues[i/5][1] += 1;
+                fatigues[i/5][2] += 5;
+            } else if(minerals[i].equals("stone")) {
+                fatigues[i/5][1] += 1;
+                fatigues[i/5][2] += 1;
+            }
+            fatigues[i/5][0] += 1;
+        }
+        Arrays.sort(fatigues, (o1, o2) -> o2[2] - o1[2]);
+        int i = 0;
+        for(int[] f : fatigues) {
+            while(picks[i] == 0) i++;
+            if(i > 2) break;
+            answer += f[i];
+            picks[i]--;
+        }
+        return answer;
+    }
+}
